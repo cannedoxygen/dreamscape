@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="An AI-driven interactive mathematical experience with recursive fractals, generative sound, and quantum-inspired interactions">
+  <title>Recursive Mathematical Dreamscape</title>
+  
+  <!-- Preconnect to resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.ico">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Recursive Mathematical Dreamscape">
+  <meta property="og:description" content="Experience an AI-driven interactive mathematical universe">
+  <meta property="og:image" content="public/assets/og-image.jpg">
+  <meta property="og:url" content="https://your-website-url.com">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Recursive Mathematical Dreamscape">
+  <meta name="twitter:description" content="Experience an AI-driven interactive mathematical universe">
+  <meta name="twitter:image" content="public/assets/og-image.jpg">
+  
+  <style>
+    /* Critical CSS for initial loading */
+    body, html {
+      margin: 0;
+      padding: 0;
+      background: #05051a;
+      color: #fff;
+      font-family: 'Work Sans', sans-serif;
+      overflow: hidden;
+      height: 100%;
+    }
+    
+    .loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #05051a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      flex-direction: column;
+    }
+    
+    .loader h1 {
+      font-family: 'Space Mono', monospace;
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+      text-align: center;
+      max-width: 80%;
+    }
+    
+    .loading-bar {
+      width: 300px;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 2px;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .loading-progress {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, #0066ff, #00ffcc);
+      border-radius: 2px;
+      transition: width 0.3s ease;
+    }
+    
+    .loading-text {
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+      opacity: 0.6;
+    }
+    
+    #canvas-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    
+    /* Prevent FOUC */
+    .hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+  </style>
+</head>
+<body>
+  <!-- Initial Loading Screen -->
+  <div class="loader" id="loader">
+    <h1>Recursive Mathematical Dreamscape</h1>
+    <div class="loading-bar">
+      <div class="loading-progress" id="loading-progress"></div>
+    </div>
+    <p class="loading-text" id="loading-text">Initializing mathematical universe...</p>
+  </div>
+  
+  <!-- Main Canvas Container -->
+  <div id="canvas-container" class="hidden"></div>
+  
+  <!-- UI Controls Container -->
+  <div id="ui-controls" class="hidden"></div>
+  
+  <!-- No inline scripts - everything loaded via webpack -->
+</body>
+</html>

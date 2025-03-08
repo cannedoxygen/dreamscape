@@ -1,0 +1,1 @@
+// Map moods to settings
